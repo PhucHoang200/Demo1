@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 16</title>
+</head>
+<body>
+    <script>
+        const Cylinder = {radius: 10, height: 15};  
+
+        function calculateSurFaceArea(Cylinder) {
+            //Diện tích toàn phần
+            const surfaceArea = 2*Math.PI*Cylinder.radius*(Cylinder.radius+Cylinder.height);
+            return surfaceArea;
+        }
+
+        // Hàm in ra thông tin của đối tượng hinh tru
+        function displayCylinderInfor(Cylinder) {
+            document.write("<p>Bán kính:  " + Cylinder.radius + "</p>");
+            document.write("<p>Chiều cao: " + Cylinder.height + "</p>");
+            const surfaceArea = calculateSurFaceArea(Cylinder);
+            document.write("<p>Diện tích toàn phần: " + surfaceArea.toFixed(2) +"</p>");
+        }
+
+        // a/ In ra thông tin của đối tượng hinh tru ra trang web.
+        document.write("<p>Thông tin của đối tượng hinh tru trước khi chỉnh sửa:</p>");
+        displayCylinderInfor(Cylinder);
+        // b/ Cập nhật thuộc tính height = 30
+        Cylinder.height = 30;
+        document.write("<p>Thông tin của đối tượng hinh tru sau khi chỉnh sửa:</P>");
+        displayCylinderInfor(Cylinder);
+    </script>
+    <p>Võ Thành Hoàng Phúc_6351071056</p>
+</body>
+</html>
